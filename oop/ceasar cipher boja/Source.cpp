@@ -5,12 +5,16 @@
 
 using namespace std;
 
-void encrypt()
+void EncryptOrDecrypt(string type)
 {
-    string input;
+    int rotation;
+    cout << "Enter amount of rotation" << endl;
+    cin >> rotation;
+    cin.ignore();
     int count = 0;
     int length;
-    cout << "enter text" << endl;
+    string input;
+    cout << type << endl;
     getline(cin, input);
     length = (int)input.length();
 
@@ -19,7 +23,7 @@ void encrypt()
         if (isalpha(input[count]))
         {
             input[count] = tolower(input[count]);
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < rotation; i++)
             {
                 if (input[count] == 'z')
                     input[count] = 'a';
@@ -31,38 +35,26 @@ void encrypt()
     cout << "Results: \n" << input << endl;
 } 
 
-/*
-void decrypt() 
-{
-    string input;
-    int count = 0;
-    int length;
-    cout << "enter text" << endl;
-    getline(cin, input);
-    length = (int)input.length();
 
-    for (count = 0; count < length; count++)
+
+void choice() {
+    string choice2;
+    cout << "Choose between decrypt or encrypt" << endl;
+    cin >> choice2;
+
+    if (choice2 == "encrypt" || choice2 == "Encrypt") 
     {
-        if (isalpha(input[count]))
-        {
-            input[count] = tolower(input[count]);
-            for (int i = 0; i < 1; i++)
-            {
-                if (input[count] == 'z')
-                    input[count] = 'a';
-                else
-                    input[count]++;
-            }
-        }
+        EncryptOrDecrypt("Type text to encrypt");
     }
-    cout << "Results: \n" << input << endl;
+    if (choice2 == "decrypt" || choice2 == "Decrypt")
+    {
+        EncryptOrDecrypt("Type encrypted text to decrypt");
+    }
 
 }
-/**/
 
 
 int main()
 {
-    encrypt();
-
+    choice();
 }
