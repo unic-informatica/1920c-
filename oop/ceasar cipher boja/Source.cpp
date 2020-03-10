@@ -7,13 +7,24 @@ using namespace std;
 
 int main()
 {
+    cin << choice << "choose now";
+    if (choice == "decrypt") {
+        ;
+
+    }
+    if (choice == "encrypt") {
+        ;
+    }
+
+    cin.ignore()
+
     string input;
     int count = 0;
     int length;
-    cout << "Enter text" << endl;
     getline(cin, input);
     length = (int)input.length();
 
+    
     for (count = 0; count < length; count++)
     {
         if (isalpha(input[count]))
