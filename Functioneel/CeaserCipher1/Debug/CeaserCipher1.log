@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\tom lengkeek\desktop\informatica\ceasercipher1\ceasercipher1\main.cpp(12): warning C4018: '<': signed/unsigned mismatch
+c:\users\tom lengkeek\desktop\informatica\ceasercipher1\ceasercipher1\main.cpp(27): warning C4018: '<': signed/unsigned mismatch
+  CeaserCipher1.vcxproj -> C:\Users\Tom Lengkeek\Desktop\Informatica\CeaserCipher1\Debug\CeaserCipher1.exe
+  CeaserCipher1.vcxproj -> C:\Users\Tom Lengkeek\Desktop\Informatica\CeaserCipher1\Debug\CeaserCipher1.pdb (Partial PDB)
