@@ -5,18 +5,18 @@
 
 using namespace std;
 
-void EncryptOrDecrypt(string type)
+void versleutelofontsleutel(string type)
 {
     int rotation;
-    cout << "Enter amount of rotation" << endl;
+    cout << "voer de hoeveelheid rotatie in" << endl;
     cin >> rotation;
     cin.ignore();
     int count = 0;
-    int length;
+    int lengte;
     string input;
     cout << type << endl;
     getline(cin, input);
-    length = (int)input.length();
+    lengte = (int)input.length();
 
     for (count = 0; count < length; count++)
     {
@@ -32,23 +32,23 @@ void EncryptOrDecrypt(string type)
             }
         }
     }
-    cout << "Results: \n" << input << endl;
+    cout << "resultaat: \n" << input << endl;
 } 
 
 
 
 void choice() {
     string choice2;
-    cout << "Choose between decrypt or encrypt" << endl;
+    cout << "kies tussen versleutelen en ontsleutelen" << endl;
     cin >> choice2;
 
-    if (choice2 == "encrypt" || choice2 == "Encrypt") 
+    if (choice2 == "versleutel" || choice2 == "Versleutel") 
     {
-        EncryptOrDecrypt("Type text to encrypt");
+        versleutelofontsleutel("Typ tekst om te versleutelen");
     }
-    if (choice2 == "decrypt" || choice2 == "Decrypt")
+    if (choice2 == "ontsleutel" || choice2 == "Ontsleutelen")
     {
-        EncryptOrDecrypt("Type encrypted text to decrypt");
+        versleutelofontsleutel("Typ versleutelde tekst om te ontsleutelen");
     }
 
 }
